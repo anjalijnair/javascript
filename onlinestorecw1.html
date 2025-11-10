@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online store</title>
+</head>
+<body align="center">
+    <h2>Online store</h2>
+    <p>Total Earnings</p>
+    <p id="first"></p>
+    <p>Total earnings after change the price of T-shirt</p>
+    <p id="second"></p>
+    <script>
+        var noOfTshirt=5;
+        var priceOfTshirt=400;
+        var noOfCap=3;
+        let priceOfCap=150;
+        const totalTshirt=noOfTshirt*priceOfTshirt;
+        var totalCap=noOfCap*priceOfCap;
+        var total1=totalCap+totalTshirt;
+        document.getElementById("first").innerHTML=total1;
+        var priceOfTshirt1=450;
+        var totalTshirt1=noOfTshirt*priceOfTshirt1;
+        var total2=totalTshirt1+totalCap;
+        document.getElementById("second").innerHTML=total2;
+    </script>
+</body>
+</html>
