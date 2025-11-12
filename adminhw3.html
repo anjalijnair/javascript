@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helper tool</title>
+</head>
+<body>
+    <script>
+        var admin={
+                    username:" coolUser99 ",
+                    bio:" I LOVE coding! Javascript is great!!! "
+           
+                  };
+        function  cleanUserBio(profile)
+            {
+                var cleanUserName=profile.username.trim();
+                console.log(cleanUserName);
+                cleanUserName=cleanUserName.toLowerCase();
+                console.log(cleanUserName);
+                var cleanBio=profile.bio.trim();
+                cleanBio=cleanBio.toLocaleLowerCase();
+                console.log(cleanBio);
+                cleanBio=cleanBio.replace(/javascript/g,"Js");
+                console.log(cleanBio);
+                var bioLength=cleanBio.length;
+                console.log(bioLength);
+                return
+                {
+                    cleanUserName,
+                    cleanBio,
+                    bioLength
+                };
+            }
+        //var final={ };
+        var final=cleanUserBio(admin);
+        console.log(final);
+
+    </script>
+    
+</body>
+</html>
