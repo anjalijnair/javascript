@@ -16,8 +16,10 @@
     <p id="rs"></p>
     <p>The pi constant :</p>
     <p id="pi"></p>
-    <p>Type Conversion :</p>
+    <p>Type after Conversion :</p>
     <p id="tc"></p>
+    <p>The number is :</p>
+    <p id="tc1"></p>
     <script>
         var randomNum=Math.floor(Math.random() * 100);
         document.getElementById("rn").innerHTML=randomNum;
@@ -26,11 +28,14 @@
         document.getElementById("us").innerHTML=result;
         var diff=randomNum-result;
         document.getElementById("df").innerHTML=diff;
-        document.getElementById("rs").innerHTML =Math.round(Math.sqrt(userScore));
+        var string=Math.sqrt(userScore);
+        document.getElementById("rs").innerHTML =Math.round(string);
         document.getElementById("pi").innerHTML=Math.PI;
         var num="50";
         var num1=num*2;
         document.getElementById("tc").innerHTML=typeof(num1);
+        document.getElementById("tc1").innerHTML=num1;
+         
 
 
 
