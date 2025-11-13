@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery game HW4</title>
+</head>
+<body>
+    <p>The Mystery Value :</p>
+    <p id="mv"></p>
+    <p>The user Input Score</p>
+    <p id="uis"></p>
+    <p>Absolute difference between the mystery and user score :</p>
+    <p id="mu"></p>
+    <p>The implicite type conversion of multiply the string "20" and 5</p>
+    <p id="ml"></p>
+    <p>Heighest and Lowest among 10,20 and the mystery value.</p>
+    <p>Heighest:</p>
+    <p id="hst"></p>
+    <p>Lowest:</p>
+    <p id="lst"></p>
+    <script>
+        function random(min, max)
+        {
+         const num = Math.floor(Math.random() * (max - min + 1)) + min;
+         return num;
+        }
+        x = random(1, 50);     
+        document.getElementById("mv").innerHTML=x;  
+        var userScore="23";
+        document.getElementById("uis").innerHTML=userScore; 
+        var us=Number(userScore);
+        var dif=x-us;
+        var absv=Math.abs(dif);
+        document.getElementById("mu").innerHTML=absv; 
+        console.log("THe sqrt of  user's source : "+ Math.sqrt(us));
+        console.log("The value of PI : "+Math.PI);
+        var mul="20"*5;
+        document.getElementById("ml").innerHTML=mul; 
+        var h,l;
+        document.getElementById("hst").innerHTML=Math.max(10,20,x); 
+        document.getElementById("lst").innerHTML=Math.min(10,20,x); 
+    </script>
+    
+</body>
+</html>
