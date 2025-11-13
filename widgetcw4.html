@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widgetcw4</title>
+</head>
+<body>
+    <p>The random number between 1 and 100.</p>
+    <p id="rn"></p>
+    <p>The user Score:</p>
+    <p id="us"></p>
+    <p>The difference between random number and userScore :</p>
+    <p id="df"></p>
+    <p>The rounded sqrt of userscore:</p>
+    <p id="rs"></p>
+    <p>The pi constant :</p>
+    <p id="pi"></p>
+    <p>Type Conversion :</p>
+    <p id="tc"></p>
+    <script>
+        var randomNum=Math.floor(Math.random() * 100);
+        document.getElementById("rn").innerHTML=randomNum;
+        var userScore="45";
+        var result=Number(userScore);
+        document.getElementById("us").innerHTML=result;
+        var diff=randomNum-result;
+        document.getElementById("df").innerHTML=diff;
+        document.getElementById("rs").innerHTML =Math.round(Math.sqrt(userScore));
+        document.getElementById("pi").innerHTML=Math.PI;
+        var num="50";
+        var num1=num*2;
+        document.getElementById("tc").innerHTML=typeof(num1);
+
+
+
+    </script>
+    
+</body>
+</html>
