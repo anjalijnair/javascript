@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onlinestore</title>
+</head>
+<body>
+    <button onclick="object.returnCheck()"> check here</button>
+    <p id="c"></p>
+    <script>
+        var object={
+            itemName:"book",
+            isDelivered:true,
+            daysSinceDelivery:6,
+            returnCheck:function()
+            {
+              var ck=(object.isDelivered==true&&object.daysSinceDelivery<=7)?"Eligible for return":"Return period expired";
+              document.getElementById("c").innerHTML=ck;
+            }
+        };
+        var existItem="object.itemName"in object;
+        console.log(`item name exist ${existItem}`);
+        var deleteItem=delete object.daysSinceDelivery;
+        console.log(`dayssinve delivery deleted :${object.daysSinceDelivery}`);
+        console.log(object);
+
+        
+    </script>
+</body>
+</html>
