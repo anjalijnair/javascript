@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile page hw5</title>
+</head>
+<body>
+    <p>Check whether the user is old enough to access admin features.</p>
+    <button onclick="checkAccess()">check here</button>
+   <u><p id="ac"></p></u>
+    <p>check age property  exist or not</p>
+    <p id="ap"></p>
+    <p>user object after deletion of age</p>
+    <p id="da"></p>
+    <script>
+        var user={
+            name:"Haritha",
+            age:23,
+            isAdmin:true
+        };
+        function checkAccess()
+        {
+            var checkAge=(user.age>=18&&user.isAdmin==true)?"Access Granted":"Access Denied";
+            document.getElementById("ac").innerHTML=checkAge;
+            
+        }
+        var ageProperty=("age" in user);
+        document.getElementById("ap").innerHTML=ageProperty;
+        delete user.age;
+        document.getElementById("da").innerHTML=JSON.stringify(user);
+
+    </script>
+</body>
+</html>
