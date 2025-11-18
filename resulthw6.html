@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+</head>
+<body>
+    
+    <script>
+    var student=[
+    {name:"anand",score:"80"},
+    {name:"malu",score:"30"},
+    {name:"mini",score:"70"},
+    {name:"manu",score:"95"},];
+    for(var i=0;i<student.length;i++)
+    {
+        console.log("Name:"+student[i].name+" Score:"+student[i].score);
+
+    }
+    console.log("All student names:");
+    for(var i=0;i<student.length;i++)
+    {
+        console.log(student[i].name);
+    }
+    console.log("students who scored >60 marks");
+    var passed=student.filter(function(student){return student.score>60;}).map(function(student){return student.name;});
+    console.log(passed);
+    console.log("Total score of all students");
+    var totalScore=student.reduce(function(total,students){
+        return total+student.score;
+    },0);
+    console.log(totalScore);
+    var allPassed=student.every(function (students){return student.score>35;});
+    console.log("all students passed?"+allPassed);
+    var scoreabove90=student.some(function(student){return student.score>90;}
+    );
+    console.log("any student score > 90?"+scoreabove90);
+    </script>
+</body>
+</html>

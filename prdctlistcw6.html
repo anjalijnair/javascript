@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+</head>
+<body>
+    <p>Merged new list:</p>
+    <p id="mnl"></p>
+    <p>filtered new list with price>50;</p>
+    <p id="lt"></p>
+    <p>Updated product list</p>
+    <p id="upl"></p>
+    <script>
+    var product=["apple","banana","grapes","guava","cherry"];
+    var price=[100,20,310,40,250];
+    var newList=[];
+    for(var i=0;i<product.length;i++)
+    {
+        newList.push=("product:"+product[i]+"-price:"+price[i]);
+    }
+    for(var i=0;i<newList.length;i++)
+    {
+        document.getElementById("mnl").innerHTML=newList[i];
+    }
+
+    var lessThan50 = newList.filter(myFunction);
+
+    document.getElementById("lt").innerHTML = lessThan50;
+    function myFunction(value, index, array)
+    {
+    return value > 50;
+    }
+    product.push("watermelon");
+    price.push("80");
+    newList=[];
+    for(var i=0;i<product.length;i++)
+    {
+        newList.push("product:"+product[i]+"-price:"+price[i]);
+    }
+    for(var i=0;i<newList;i++)
+    {
+        console.log(newList[i]);
+    }
+    </script>
+
+    
+</body>
+</html>

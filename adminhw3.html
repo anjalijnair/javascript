@@ -12,27 +12,21 @@
                     bio:" I LOVE coding! Javascript is great!!! "
            
                   };
-        function  cleanUserBio(profile)
+        function cleanUserBio(profile)
             {
                 var cleanUserName=profile.username.trim();
-                console.log(cleanUserName);
-                cleanUserName=cleanUserName.toLowerCase();
-                console.log(cleanUserName);
-                var cleanBio=profile.bio.trim();
-                cleanBio=cleanBio.toLocaleLowerCase();
-                console.log(cleanBio);
-                cleanBio=cleanBio.replace(/javascript/g,"Js");
-                console.log(cleanBio);
-                var bioLength=cleanBio.length;
-                console.log(bioLength);
+                var clUsrNm=cleanUserName.toLowercase();
+                console.log(clUsrNm);
+                var cleanBio=profile.bio.trim().toLowercase();
+                cleanBio=cleanBio.replace(/Javascript/g,'js');
+                const bioLength=cleanBio.length;
                 return
                 {
-                    cleanUserName,
+                    clnUsrNm,
                     cleanBio,
                     bioLength
                 };
             }
-        //var final={ };
         var final=cleanUserBio(admin);
         console.log(final);
 
