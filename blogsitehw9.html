@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Site Commenthw9</title>
+</head>
+<body>
+    <script>
+        
+        function cleanComment(input)
+        {
+            var cleanedComment=input.replace(/(bad|ugly|Stupid)/ig,"***");
+            console.log(cleanedComment)
+            var numberMatch=input.match(/\d+/g);
+            var numcount=numberMatch?numberMatch.length:0;
+            console.log(`The no of numbers is ${numcount}`);
+            var capitalWord =input.match(/\b[A-Z][a-zA-z]*/g);
+            var capitalWords=capitalWord?capitalWord.length:0;
+            console.log("Capitalized Word Count:"+capitalWords);
+            return
+            {
+             `newComment: ${cleanedComment} numberCount: ${numbercount} capWords:${capitalWords}`;
+            }
+        }
+        var comment="I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great";
+        console.log(cleanComment(comment));
+
+    </script>
+    
+</body>
+</html>
