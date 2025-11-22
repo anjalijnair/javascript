@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback hw10</title>
+</head>
+<body>
+    <script>
+        var feedbackJson={
+            "msg":"Thank you for coming"
+        };
+        try{
+            var data=JSON.parse(feedbackJson);
+            var checkMsg=(feedback)=>
+        {
+            var a=/Thank/i.test(feedback);
+            console.log(a);
+            return a;
+        }
+        if(checkMsg(data.msg)==true)
+        {
+            console.log("Positive feedback received");
+        }
+        else
+        {
+            console.log("Feedback noted");
+        }
+
+        }catch(err)
+        {
+            console.log("Invalid Json Format");        }
+    </script>
+</body>
+</html>

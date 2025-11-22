@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json cw10</title>
+</head>
+<body>
+    <script>
+        const jsonInfo={
+            "name":"anjali",
+            "email":"anjali@gmail.com",
+            "message":"Json into Object"
+        };
+        let dataObj;
+        const msgJson=()=>
+        {
+          try{
+            dataObj=JSON.parse(jsonInfo);
+            alert(`Message received from ${dataObj.name}`);
+
+          }catch(err)
+          {
+            console.log("Error... Invalid Json");
+          }
+            
+
+        }
+        msgJson();
+        
+    </script>
+</body>
+</html>
