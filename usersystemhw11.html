@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user system hw11</title>
+</head>
+<body>
+    <script>
+        class user{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email1=email;
+            }
+            getname()
+            {
+                return this.name;
+            }
+            getage()
+            {
+                return this.age;
+            }
+            setemail(newMail)
+            {
+                if(typeof newMail=="string"&&newMail.includes("@"))
+                {
+                    this.email1=newMail;
+                }
+                else
+                {
+                    console.log("Invalid E-mail.");
+                }
+            }
+            get email()
+            {
+                return this.email1;
+            }
+            userDetails()
+            {
+                console.log(`Name : ${this.name}`);
+                console.log(`Age : ${this.age}`);
+                console.log(`E-mail : ${this.email1}`);
+            }
+
+        }
+        let user1=new user("Anupama",25,"anupama25@gmail.com");
+        user1.setemail("anupama123@gmail.com");
+        user1.setemail("abcd");
+        user1.userDetails();
+     </script>
+</body>
+</html>

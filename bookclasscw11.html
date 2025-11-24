@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookstore class cw11</title>
+</head>
+<body>
+    <script>
+        class book{
+            constructor(title,author,price){
+                this.title=title;
+                this.author=author;
+                this.prices=price;
+            }
+            gettitle()
+            {
+                return this.title;
+            }
+            getauthor()
+            {
+                return this.author;
+            }
+            setprice(newPrice)
+            {
+                if(typeof newPrice=="number"&&newPrice>0)
+                {
+                    this.prices=newPrice;
+                }
+                else
+                {
+                    console.log("Invalid price..")
+                }
+            }
+            get price()
+            {
+                return this.prices;
+            }
+            bookDetails()
+            {
+                console.log(`Title : ${this.title}`);
+                console.log(`Author : ${this.author}`);
+                console.log(`Price :${this.prices}`);
+            }
+            }
+        let book1=new book("Aadujeevitham","Benyamin",250);
+        book1.setprice(600);
+        book1.setprice("abc");
+        book1.bookDetails();
+    </script>
+</body>
+</html>
